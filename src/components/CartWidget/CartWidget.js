@@ -1,6 +1,6 @@
 import './CartWidget.css'
 
-const CartWidget = () => {
+const CartWidget =() => {
     return(
     <div>
         <img src={'./imagenes/logo carrito.png'} className="App-cart" alt="cart" />

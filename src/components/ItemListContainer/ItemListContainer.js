@@ -1,14 +1,26 @@
+import React, { useState } from "react";
+import ItemCount from '../ItemCount/ItemCount';
 import './ItemListContainer.css'
-import React from 'react';
 
-const ItemListContainer = ({ onAdd, stock, initial }) => {
+
+
+const ItemListContainer = () => {
+    const [count, setCount] = useState(1);
+
+    const onAdd = (condition) => {
+        if (condition === '-'){
+            setCount(count - 1);
+        }
+        if (condition === '+'){
+            setCount(count + 1);
+        }
+    };
+    const stock= 5;
+    const initial = 1 ;
     return (
-        <div className="ItemListContainer">
-            <button onClick={onAdd}> - </button>
-            <p>{stock}</p>
-            <p>{initial}</p>
-            <button onClick={onAdd}> + </button>
-        </div>
+     <div className="ItemListContainer">
+        <ItemCount onAdd={onAdd} stock={stock} initial={initial} count={count}/>
+    </div>
     )
 }
 
