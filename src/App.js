@@ -5,10 +5,13 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 
 
 function App() {
+    const onAdd = () => {console.log("hice click en onAdd")};
+    const stock= 10;
+    const initial = 2 ;
   return (
     <div className="App">
       <NavBar />
-      <ItemListContainer greeting='Hola Coder'/>
+      <ItemListContainer onAdd={onAdd} stock={stock} initial={initial}/>
     </div>
   );
 }

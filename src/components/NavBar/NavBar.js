@@ -10,7 +10,7 @@ const NavBar = () => {
             </div>
 
             <div>
-                <ul class='nav__links' >
+                <ul className='nav__links' >
                     <li> <a href=" ">COLECCIONES </a></li>
                     <li> <a href=" ">UNITE A NOSOTROS </a></li>
                     <li> <a href=" ">NIKE JOURNAL </a></li>
